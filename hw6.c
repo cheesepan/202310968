@@ -6,7 +6,7 @@ int main(void) {
     int oddCount = 0;  
     int evenCount = 0; 
 
-    printf("5°³ÀÇ Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä: \n");
+    printf("5ê°œì˜ ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”: \n");
 
     
     for (int i = 0; i < 5; i++) {
