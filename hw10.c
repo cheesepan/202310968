@@ -1,7 +1,5 @@
-
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-#include <math.h>
 #include <string.h>
 
 struct City {
@@ -10,26 +8,26 @@ struct City {
     int population;
 };
 
-int main() {
+int main()
+{
     struct City cities[3];
 
-    for (int i = 0; i < 3; ++i) {
+    for (int i = 0; i < 3; ++i)
+    {
         printf("Input for City %d:\n", i + 1);
 
         printf("Name> ");
         scanf("%s", cities[i].name);
 
-        getchar(); 
-
         printf("Country> ");
+        getchar();
         fgets(cities[i].country, sizeof(cities[i].country), stdin);
-        cities[i].country[strcspn(cities[i].country, "\n")] = '\0'; // 개행 문자 제거
+        cities[i].country[strcspn(cities[i].country, "\n")] = '\0';
 
         printf("Population> ");
         scanf("%d", &cities[i].population);
-        getchar(); 
+        getchar();
     }
-
     printf("\nPrinting the three cities:\n");
     for (int i = 0; i < 3; ++i) {
         printf("%d. %s in %s with a population of %d people\n", i + 1, cities[i].name, cities[i].country, cities[i].population);
